@@ -1,0 +1,14 @@
+pkgbase = helm-push
+	pkgdesc = Helm plugin to pushing charts to chartmuseum
+	pkgver = 0.10.2
+	pkgrel = 1
+	url = https://github.com/chartmuseum/helm-push
+	install = helm-push.install
+	arch = x86_64
+	license = Apache
+	makedepends = go
+	depends = helm
+	source = https://github.com/chartmuseum/helm-push/archive/v0.10.2/helm-push-0.10.2.tar.gz
+	sha256sums = 0e6f22aa0c44a9ad96328c847e140babfc39a8d895e488e5391ee58fe323a4b2
+
+pkgname = helm-push
