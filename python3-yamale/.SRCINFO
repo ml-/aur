@@ -1,0 +1,16 @@
+pkgbase = python3-yamale
+	pkgdesc = A schema and validator for YAML
+	pkgver = 4.0.3
+	pkgrel = 1
+	url = https://github.com/23andMe/Yamale
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	depends = python-pyaml
+	optdepends = python-ruamel-yaml
+	provides = yamale
+	provides = python-yamale
+	source = https://github.com/23andMe/Yamale/archive/4.0.3/python3-yamale-4.0.3.tar.gz
+	sha256sums = a913a5a8094f61bcabf6db5def05ea3e5310163a95c558228feeaa33b7263439
+
+pkgname = python3-yamale
