@@ -128,6 +128,11 @@ source = "github"
 github = "zaid/vim-rec"
 use_latest_release = true
 
+[vacuum]
+source = "github"
+github = "daveshanley/vacuum"
+use_latest_release = true
+
 [vt-cli]
 source = "github"
 github = "VirusTotal/vt-cli"
