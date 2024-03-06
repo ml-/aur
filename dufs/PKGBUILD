@@ -1,0 +1,44 @@
+# Maintainer: ml <ml-aur@ransomware.download>
+pkgname=dufs
+pkgver=0.40.0
+pkgrel=1
+pkgdesc='file server with static serving, uploading, searching, accessing control, webdav'
+arch=('x86_64')
+url='https://github.com/sigoden/dufs'
+license=('Apache-2.0 OR MIT')
+depends=('bzip2' 'gcc-libs' 'glibc' 'xz')
+makedepends=('rust')
+options=(!lto)
+source=("$url"/archive/v"$pkgver"/"$pkgname"-"$pkgver".tar.gz)
+sha512sums=('e3175ecb7efeccb815b8643cf5c400e5359785abebe16c4efede5f479cd988feef14a12aff3e2318460345cd02df47d178abdf3e3585c7b5f0773565db57c42b')
+
+prepare() {
+  cd "$pkgname-$pkgver"
+  export RUSTUP_TOOLCHAIN=stable
+  cargo fetch --locked --target "$CARCH"-unknown-linux-gnu
+}
+
+build() {
+  cd "$pkgname-$pkgver"
+  export RUSTUP_TOOLCHAIN=stable
+  export CARGO_TARGET_DIR=target
+  cargo build --frozen --release
+}
+
+check() {
+  cd "$pkgname-$pkgver"
+  export RUSTUP_TOOLCHAIN=stable
+  cargo test --frozen
+}
+
+package() {
+  cd "$pkgname-$pkgver"
+  install -Dm755 -t "$pkgdir"/usr/bin target/release/"$pkgname"
+
+  mkdir -p "$pkgdir"/usr/share/{bash-completion/completions,zsh/site-functions,fish/vendor_completions.d}
+  target/release/dufs --completions zsh >"$pkgdir"/usr/share/zsh/site-functions/_dufs
+  target/release/dufs --completions bash >"$pkgdir"/usr/share/bash-completion/completions/dufs
+  target/release/dufs --completions fish >"$pkgdir"/usr/share/fish/vendor_completions.d/dufs.fish
+  install -Dm644 README.md "$pkgdir"/usr/share/doc/"$pkgname"/README.md
+  install -Dm644 -t "$pkgdir"/usr/share/licenses/"$pkgname" LICENSE-APACHE LICENSE-MIT
+}
