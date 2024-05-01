@@ -3,14 +3,15 @@ pkgname=lpac
 pkgver=2.0.1
 pkgrel=1
 pkgdesc="C-based eUICC LPA"
-arch=('any')
+arch=('x86_64')
 url="https://github.com/estkme-group/lpac"
-license=('Custom')
+license=('AGPL-3.0-only' 'LGPL-2.1-only')
 makedepends=('cmake' 'gcc')
+depends=('curl' 'pcsclite')
 provides=("lpac")
 conflicts=("lpac")
 source=(
-  "https://github.com/estkme-group/lpac/archive/refs/tags/v$pkgver.tar.gz"
+  lpac-v$pkgver.tar.gz::https://github.com/estkme-group/lpac/archive/refs/tags/v$pkgver.tar.gz
 )
 sha256sums=(
   "SKIP"
