@@ -1,0 +1,5 @@
+[dufs]
+source = "github"
+github = "sigoden/dufs"
+use_max_tag = true
+prefix = "v"

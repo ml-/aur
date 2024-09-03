@@ -1,6 +1,6 @@
 # Maintainer: ml <ml-aur@ransomware.download>
 pkgname=dufs
-pkgver=0.41.0
+pkgver=0.42.0
 pkgrel=1
 pkgdesc='file server with static serving, uploading, searching, accessing control, webdav'
 arch=('x86_64')
@@ -10,7 +10,7 @@ depends=('bzip2' 'gcc-libs' 'glibc' 'xz')
 makedepends=('rust')
 options=(!lto)
 source=("$url"/archive/v"$pkgver"/"$pkgname"-"$pkgver".tar.gz)
-sha512sums=('ef93d4f456a1b9f3cf73c4763e46e088d477262f4d9f3c55b0c29bce1b345ebf0f649a2f63b251093b2e5fc67629e5a064168f7608411b127ec579027803d5e8')
+sha512sums=('083d59a040f2b96af6fed98876b07b727ea39413b1c28cf68ed2ee65198a4ead3dcdcb090a80d2acd3b0a32b40cef009041472995907a200268539d9e4b9b6b4')
 
 prepare() {
   cd "$pkgname-$pkgver"
