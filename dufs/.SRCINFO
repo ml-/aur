@@ -1,6 +1,6 @@
 pkgbase = dufs
 	pkgdesc = file server with static serving, uploading, searching, accessing control, webdav
-	pkgver = 0.42.0
+	pkgver = 0.43.0
 	pkgrel = 1
 	url = https://github.com/sigoden/dufs
 	arch = x86_64
@@ -11,7 +11,7 @@ pkgbase = dufs
 	depends = glibc
 	depends = xz
 	options = !lto
-	source = https://github.com/sigoden/dufs/archive/v0.42.0/dufs-0.42.0.tar.gz
-	sha512sums = 083d59a040f2b96af6fed98876b07b727ea39413b1c28cf68ed2ee65198a4ead3dcdcb090a80d2acd3b0a32b40cef009041472995907a200268539d9e4b9b6b4
+	source = https://github.com/sigoden/dufs/archive/v0.43.0/dufs-0.43.0.tar.gz
+	sha512sums = ab162f64cf4a43712a4fa204fe8abdef53bf8876805d15d9a3eaac1617bebc2891f5039ad3e84d5f9516f40ee9bc03cb6d2eaea103828f82bcf83e9ea08e8aec
 
 pkgname = dufs
