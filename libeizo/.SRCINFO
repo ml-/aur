@@ -1,0 +1,18 @@
+pkgbase = libeizo
+	pkgdesc = Userspace utility to control EIZO FlexScan EV monitors
+	pkgver = r174.716ab43
+	pkgrel = 1
+	url = https://github.com/markbolhuis/libeizo
+	arch = x86_64
+	license = LGPL-3.0-only
+	makedepends = git
+	makedepends = meson
+	depends = gcc-libs
+	depends = glibc
+	depends = systemd-libs
+	provides = libeizo.so
+	provides = eizoctl
+	source = libeizo::git+https://github.com/markbolhuis/libeizo
+	sha256sums = SKIP
+
+pkgname = libeizo
