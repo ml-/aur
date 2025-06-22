@@ -9,4 +9,4 @@
 - <https://wiki.archlinux.org/title/PKGBUILD>
 - <https://github.com/eli-schwartz/aurpublish>
 - <https://gitlab.archlinux.org/pacman/namcap>
-- <https://repod.archlinux.page/>
+- <https://nvchecker.readthedocs.io/en/latest/>
