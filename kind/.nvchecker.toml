@@ -1,5 +1,0 @@
-[kind]
-source = "github"
-github = "kubernetes-sigs/kind"
-use_latest_release = true
-prefix = "v"
